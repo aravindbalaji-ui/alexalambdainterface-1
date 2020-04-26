@@ -5,19 +5,19 @@
             return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
         },
         handle(handlerInput) {
-            const speakOutput = 'Welcome, you can say operating hours or help in schedule meeting. Which would you like to try?';
+            const speakOutput = 'Welcome to demo skill?';
             return handlerInput.responseBuilder
                 .speak(speakOutput)
                 .reprompt(speakOutput)
                 .getResponse();
         }
     };
-    const LaunchRequestHandler = {
+    const HelloWorldIntentHandler = {
         canHandle(handlerInput) {
             return Alexa.getRequestType(handlerInput.requestEnvelope) === 'helloworld';
         },
         handle(handlerInput) {
-            const speakOutput = 'Welcome, you can say operating hours or help in schedule meeting. Which would you like to try?';
+            const speakOutput = 'Hello world! THis is the is the first Alexa lambda function';
             return handlerInput.responseBuilder
                 .speak(speakOutput)
                 .reprompt(speakOutput)
